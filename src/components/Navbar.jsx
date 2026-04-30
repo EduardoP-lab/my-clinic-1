@@ -21,14 +21,14 @@ function Navbar() {
 
   return (
     <header
-      className={`navbar-fixed fixed left-0 top-0 z-50 w-full px-4 py-3 transition-[padding,background-color,box-shadow,border-color] duration-500 ease-out sm:px-6 lg:px-10 ${
-        isScrolled
-          ? 'bg-white/95 shadow-[0_18px_45px_rgba(0,112,187,0.12)]'
-          : 'bg-[#eff8ff]/88'
-      }`}
+      className="navbar-fixed pointer-events-none fixed left-0 top-0 z-50 w-full px-4 py-3 sm:px-6 lg:px-10"
     >
       <nav
-        className="mx-auto flex h-16 max-w-7xl items-center justify-between rounded-[8px] border border-white/70 bg-white/84 px-4 shadow-[0_12px_35px_rgba(2,35,58,0.08)] backdrop-blur-xl sm:px-6"
+        className={`pointer-events-auto mx-auto flex h-16 max-w-7xl items-center justify-between rounded-[8px] border px-4 backdrop-blur-xl transition-[background-color,box-shadow,border-color,transform] duration-500 ease-out sm:px-6 ${
+          isScrolled
+            ? 'border-white/80 bg-white/95 shadow-[0_18px_45px_rgba(0,112,187,0.16)]'
+            : 'border-white/35 bg-white/76 shadow-[0_12px_35px_rgba(2,35,58,0.12)]'
+        }`}
         aria-label="Navegacion principal"
       >
         <a
@@ -75,7 +75,7 @@ function Navbar() {
 
       <div
         id="mobile-navigation"
-        className={`mobile-menu mx-auto mt-3 max-w-7xl overflow-hidden rounded-[8px] border border-white/70 bg-white/96 shadow-[0_20px_50px_rgba(2,35,58,0.14)] backdrop-blur-xl md:hidden ${
+        className={`mobile-menu pointer-events-auto mx-auto mt-3 max-w-7xl overflow-hidden rounded-[8px] border border-white/70 bg-white/96 shadow-[0_20px_50px_rgba(2,35,58,0.14)] backdrop-blur-xl md:hidden ${
           isOpen ? 'is-open' : ''
         }`}
       >

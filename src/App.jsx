@@ -1,5 +1,6 @@
 import './App.css'
 import './normalize.css'
+import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <Hero />
     </>
   )
 }

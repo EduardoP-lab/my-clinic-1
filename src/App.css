@@ -184,3 +184,534 @@
     transform: translateY(0);
   }
 }
+
+.hero-electric-grid {
+  background:
+    linear-gradient(rgba(124, 216, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 216, 255, 0.07) 1px, transparent 1px),
+    radial-gradient(circle at 16% 32%, rgba(0, 112, 187, 0.46), transparent 31%),
+    radial-gradient(circle at 86% 24%, rgba(124, 216, 255, 0.26), transparent 26%),
+    #031724;
+  background-size:
+    52px 52px,
+    52px 52px,
+    auto,
+    auto,
+    auto;
+  mask-image: linear-gradient(to bottom, #000 72%, transparent);
+  animation: heroGridDrift 18s linear infinite;
+}
+
+.hero-light-sweep {
+  background:
+    linear-gradient(120deg, transparent 0 32%, rgba(124, 216, 255, 0.14) 44%, transparent 56% 100%),
+    radial-gradient(ellipse at 55% 52%, rgba(0, 112, 187, 0.3), transparent 58%);
+  mix-blend-mode: screen;
+  animation: heroLightSweep 7s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.hero-kicker {
+  animation: heroTextReveal 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-kicker-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #7cd8ff;
+  box-shadow:
+    0 0 0 0 rgba(124, 216, 255, 0.55),
+    0 0 20px rgba(124, 216, 255, 0.9);
+  animation: clinicalBeacon 1.8s ease-out infinite;
+}
+
+.hero-signal {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-signal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(124, 216, 255, 0.18), transparent);
+  transform: translateX(-110%);
+  animation: signalSweep 3.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.hero-signal:nth-child(2)::before {
+  animation-delay: 420ms;
+}
+
+.hero-signal:nth-child(3)::before {
+  animation-delay: 840ms;
+}
+
+.hero-signal:nth-child(4)::before {
+  animation-delay: 1260ms;
+}
+
+.hero-orbit-stage {
+  perspective: 1200px;
+}
+
+.dental-engine {
+  transform-style: preserve-3d;
+  animation: engineTilt 8s cubic-bezier(0.45, 0, 0.2, 1) infinite alternate;
+}
+
+.engine-ring {
+  position: absolute;
+  inset: 9%;
+  border: 1px solid rgba(124, 216, 255, 0.2);
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 42px rgba(0, 112, 187, 0.12),
+    0 0 56px rgba(0, 112, 187, 0.13);
+}
+
+.engine-ring::before,
+.engine-ring::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(from 90deg, transparent 0 18%, #7cd8ff 22%, transparent 26% 54%, #0070bb 58%, transparent 63% 100%);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  padding: 2px;
+  opacity: 0.85;
+}
+
+.engine-ring-one {
+  animation: ringSpin 16s linear infinite;
+}
+
+.engine-ring-two {
+  inset: 17%;
+  transform: rotateX(68deg) rotateZ(16deg);
+  animation: ringSpinReverse 12s linear infinite;
+}
+
+.engine-ring-three {
+  inset: 26%;
+  transform: rotateY(66deg) rotateZ(-12deg);
+  animation: ringSpin 9s linear infinite;
+}
+
+.tooth-scan {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: grid;
+  width: 44%;
+  aspect-ratio: 0.82;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 0 32px rgba(124, 216, 255, 0.4));
+}
+
+.tooth-core {
+  position: relative;
+  width: 58%;
+  height: 76%;
+  animation: toothMaterialize 4.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.tooth-crown {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 100%;
+  height: 58%;
+  border: 2px solid rgba(229, 247, 255, 0.9);
+  border-radius: 48% 48% 36% 36%;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.24), transparent 42%),
+    rgba(255, 255, 255, 0.06);
+  transform: translateX(-50%);
+}
+
+.tooth-root {
+  position: absolute;
+  top: 48%;
+  width: 39%;
+  height: 48%;
+  border: 2px solid rgba(229, 247, 255, 0.9);
+  border-top: 0;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.tooth-root-left {
+  left: 18%;
+  border-radius: 0 0 34% 60%;
+  transform: rotate(7deg);
+}
+
+.tooth-root-right {
+  right: 18%;
+  border-radius: 0 0 60% 34%;
+  transform: rotate(-7deg);
+}
+
+.scan-band {
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  height: 28px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(124, 216, 255, 0.75), transparent);
+  filter: blur(1px);
+  mix-blend-mode: screen;
+}
+
+.scan-band-one {
+  animation: scanBand 2.8s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+}
+
+.scan-band-two {
+  height: 10px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9), transparent);
+  animation: scanBand 2.8s cubic-bezier(0.76, 0, 0.24, 1) infinite reverse;
+}
+
+.scan-data-lines {
+  position: absolute;
+  inset: 2%;
+  overflow: hidden;
+  border-radius: 44%;
+  opacity: 0.7;
+}
+
+.scan-data-lines span {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(124, 216, 255, 0.68), transparent);
+  animation: dataLineFlicker 1.8s ease-in-out infinite;
+}
+
+.scan-data-lines span:nth-child(1) {
+  top: 18%;
+}
+
+.scan-data-lines span:nth-child(2) {
+  top: 32%;
+  animation-delay: 160ms;
+}
+
+.scan-data-lines span:nth-child(3) {
+  top: 49%;
+  animation-delay: 320ms;
+}
+
+.scan-data-lines span:nth-child(4) {
+  top: 66%;
+  animation-delay: 480ms;
+}
+
+.scan-data-lines span:nth-child(5) {
+  top: 81%;
+  animation-delay: 640ms;
+}
+
+.jaw-map {
+  position: absolute;
+  inset: 0;
+  animation: jawMapPulse 5s ease-in-out infinite;
+}
+
+.jaw-node {
+  --node-radius: clamp(150px, 29vw, 245px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 9px;
+  height: 20px;
+  border-radius: 999px;
+  background: #dff8ff;
+  box-shadow:
+    0 0 12px rgba(124, 216, 255, 0.85),
+    0 0 28px rgba(0, 112, 187, 0.34);
+  transform:
+    rotate(var(--node-angle))
+    translateY(calc(var(--node-radius) * -1))
+    rotate(calc(var(--node-angle) * -1));
+  animation: nodeDiagnostics 2.8s ease-in-out infinite;
+  animation-delay: calc(var(--node-index) * -80ms);
+}
+
+.pulse-matrix {
+  position: absolute;
+  inset: 17%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  transform: rotateX(62deg) rotateZ(-18deg);
+  opacity: 0.56;
+}
+
+.pulse-matrix span {
+  width: 8px;
+  height: 8px;
+  align-self: center;
+  justify-self: center;
+  border-radius: 999px;
+  background: rgba(124, 216, 255, 0.52);
+  animation: matrixSurge 2.5s ease-in-out infinite;
+  animation-delay: calc((var(--pulse-column) + var(--pulse-row)) * 90ms);
+}
+
+.hero-facts-panel {
+  animation: factsPanelReveal 1s 260ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-fact {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-fact::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(124, 216, 255, 0.12), transparent);
+  transform: translateX(-115%);
+  animation: factGlint 5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.hero-fact:nth-child(2)::after {
+  animation-delay: 900ms;
+}
+
+.hero-fact:nth-child(3)::after {
+  animation-delay: 1800ms;
+}
+
+@keyframes heroGridDrift {
+  to {
+    background-position:
+      104px 52px,
+      52px 104px,
+      center,
+      center,
+      center;
+  }
+}
+
+@keyframes heroLightSweep {
+  0%,
+  22% {
+    transform: translateX(-24%) skewX(-8deg);
+    opacity: 0;
+  }
+
+  44% {
+    opacity: 0.8;
+  }
+
+  72%,
+  100% {
+    transform: translateX(24%) skewX(-8deg);
+    opacity: 0;
+  }
+}
+
+@keyframes clinicalBeacon {
+  70% {
+    box-shadow:
+      0 0 0 12px rgba(124, 216, 255, 0),
+      0 0 20px rgba(124, 216, 255, 0.9);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(124, 216, 255, 0),
+      0 0 20px rgba(124, 216, 255, 0.9);
+  }
+}
+
+@keyframes signalSweep {
+  0%,
+  38% {
+    transform: translateX(-110%);
+  }
+
+  72%,
+  100% {
+    transform: translateX(110%);
+  }
+}
+
+@keyframes engineTilt {
+  0% {
+    transform: translate(-50%, -50%) rotateX(57deg) rotateY(-17deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotateX(62deg) rotateY(12deg) rotateZ(2deg);
+  }
+}
+
+@keyframes ringSpin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes ringSpinReverse {
+  to {
+    rotate: -360deg;
+  }
+}
+
+@keyframes toothMaterialize {
+  0%,
+  100% {
+    opacity: 0.82;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: translateY(0) scale(1);
+  }
+
+  45% {
+    opacity: 1;
+    clip-path: polygon(0 12%, 100% 0, 94% 100%, 6% 88%);
+    transform: translateY(-4px) scale(1.025);
+  }
+
+  62% {
+    clip-path: polygon(5% 0, 95% 8%, 100% 92%, 0 100%);
+  }
+}
+
+@keyframes scanBand {
+  0% {
+    top: 6%;
+    opacity: 0;
+    transform: scaleX(0.78);
+  }
+
+  18%,
+  82% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 88%;
+    opacity: 0;
+    transform: scaleX(1.08);
+  }
+}
+
+@keyframes dataLineFlicker {
+  0%,
+  100% {
+    opacity: 0.18;
+    transform: scaleX(0.72);
+  }
+
+  50% {
+    opacity: 0.92;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes jawMapPulse {
+  0%,
+  100% {
+    filter: hue-rotate(0deg) brightness(1);
+  }
+
+  50% {
+    filter: hue-rotate(16deg) brightness(1.28);
+  }
+}
+
+@keyframes nodeDiagnostics {
+  0%,
+  100% {
+    opacity: 0.42;
+    scale: 0.8;
+  }
+
+  38% {
+    opacity: 1;
+    scale: 1.28;
+  }
+}
+
+@keyframes matrixSurge {
+  0%,
+  100% {
+    opacity: 0.18;
+    transform: translateZ(0) scale(0.6);
+  }
+
+  50% {
+    opacity: 0.78;
+    transform: translateZ(46px) scale(1.18);
+  }
+}
+
+@keyframes factsPanelReveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px) rotateX(10deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+@keyframes factGlint {
+  0%,
+  44% {
+    transform: translateX(-115%);
+  }
+
+  78%,
+  100% {
+    transform: translateX(115%);
+  }
+}
+
+@keyframes heroTextReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1023px) {
+  .hero-orbit-stage {
+    min-height: 660px;
+  }
+
+  .hero-facts-panel {
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .jaw-node {
+    --node-radius: clamp(128px, 39vw, 168px);
+    width: 7px;
+    height: 16px;
+  }
+
+  .hero-orbit-stage {
+    min-height: 610px;
+  }
+
+  .dental-engine {
+    top: 42%;
+  }
+}
