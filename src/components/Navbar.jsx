@@ -24,7 +24,7 @@ function Navbar() {
       className="navbar-fixed pointer-events-none fixed left-0 top-0 z-50 w-full px-4 py-3 sm:px-6 lg:px-10"
     >
       <nav
-        className={`pointer-events-auto mx-auto flex h-16 max-w-7xl items-center justify-between rounded-[8px] border px-4 backdrop-blur-xl transition-[background-color,box-shadow,border-color,transform] duration-500 ease-out sm:px-6 ${
+        className={`navbar-surface pointer-events-auto mx-auto flex h-16 max-w-7xl items-center justify-between rounded-[8px] border px-4 backdrop-blur-xl transition-[background-color,box-shadow,border-color,transform] duration-500 ease-out sm:px-6 ${
           isScrolled
             ? 'border-white/80 bg-white/95 shadow-[0_18px_45px_rgba(0,112,187,0.16)]'
             : 'border-white/35 bg-white/76 shadow-[0_12px_35px_rgba(2,35,58,0.12)]'

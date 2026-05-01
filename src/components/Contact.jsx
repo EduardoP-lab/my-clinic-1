@@ -319,6 +319,7 @@ function Contact() {
       <form
         className="contact-form"
         aria-label="Formulario de contacto"
+        data-aos="block-zoom"
         onSubmit={handleSubmit}
       >
         <div className="contact-form-header">
@@ -328,7 +329,11 @@ function Contact() {
 
         <div className="contact-fields">
           {contactFields.map((field) => (
-            <label className="contact-field" htmlFor={field.id} key={field.id}>
+            <label
+              className="contact-field"
+              htmlFor={field.id}
+              key={field.id}
+            >
               <span>{field.label}</span>
               <input
                 id={field.id}
@@ -341,7 +346,10 @@ function Contact() {
             </label>
           ))}
 
-          <label className="contact-field contact-field-message" htmlFor="message">
+          <label
+            className="contact-field contact-field-message"
+            htmlFor="message"
+          >
             <span>Mensaje</span>
             <textarea
               id="message"

@@ -111,7 +111,10 @@ function Services() {
       className="services-section relative overflow-hidden px-4 py-24 sm:px-6 lg:px-10"
     >
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-        <div className="services-intro flex flex-col items-center">
+        <div
+          className="services-intro flex flex-col items-center"
+          data-aos="block-left"
+        >
           <p className="services-kicker">Servicios dentales</p>
           <h2 className="mt-4 max-w-xl text-4xl font-black leading-tight tracking-[0] text-[#062338] sm:text-5xl">
             Cuidado claro, medible y pensado por etapas.
@@ -135,6 +138,7 @@ function Services() {
           className={`services-grid ${
             showAllServices ? 'services-grid-expanded' : ''
           }`}
+          data-aos="block-rise"
         >
           {visibleServices.map((service) => (
             <ServiceCard service={service} key={service.title} />

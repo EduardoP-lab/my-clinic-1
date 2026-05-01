@@ -22,29 +22,32 @@ const testimonials = [
 function Stars() {
   return (
     <div className="testimonial-stars" aria-label="5 de 5 estrellas">
-      <span aria-hidden="true">★</span>
-      <span aria-hidden="true">★</span>
-      <span aria-hidden="true">★</span>
-      <span aria-hidden="true">★</span>
-      <span aria-hidden="true">★</span>
+      <span aria-hidden="true">&#9733;</span>
+      <span aria-hidden="true">&#9733;</span>
+      <span aria-hidden="true">&#9733;</span>
+      <span aria-hidden="true">&#9733;</span>
+      <span aria-hidden="true">&#9733;</span>
     </div>
   )
 }
 
 function Testimonials() {
   return (
-    <section id="testimonios" className="testimonials-section px-4 py-24 sm:px-6 lg:px-10">
+    <section
+      id="testimonios"
+      className="testimonials-section px-4 py-24 sm:px-6 lg:px-10"
+    >
       <div className="mx-auto max-w-7xl">
-        <div className="testimonials-header">
+        <div className="testimonials-header" data-aos="block-rise">
           <p>Testimonios</p>
           <h2>Pacientes que llegaron con dudas y salieron con claridad.</h2>
         </div>
 
-        <div className="testimonials-list">
+        <div className="testimonials-list" data-aos="block-rise" data-aos-delay="120">
           {testimonials.map((testimonial) => (
             <figure className="testimonial-item" key={testimonial.name}>
               <Stars />
-              <blockquote>“{testimonial.comment}”</blockquote>
+              <blockquote>&ldquo;{testimonial.comment}&rdquo;</blockquote>
               <figcaption>
                 <strong>{testimonial.name}</strong>
                 <span>{testimonial.detail}</span>
