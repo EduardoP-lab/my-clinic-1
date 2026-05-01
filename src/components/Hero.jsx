@@ -129,7 +129,7 @@ function Hero() {
     >
       <HeroBackground />
 
-      <div className="mx-auto grid min-h-[calc(100vh-8rem)] max-w-7xl items-center gap-10 py-10 lg:grid-cols-[1.12fr_0.88fr] lg:gap-12">
+      <div className="mx-auto grid min-h-[calc(100vh-8rem)] max-w-7xl items-center gap-10 lg:grid-cols-[1.12fr_0.88fr] lg:gap-12">
         <div className="relative z-10 max-w-5xl">
           <div className="hero-kicker mb-6 inline-flex items-center gap-3 rounded-[8px] border border-[#7cd8ff]/30 bg-white/8 px-4 py-2 text-sm font-semibold text-[#c9f2ff] shadow-[0_0_30px_rgba(0,112,187,0.18)] backdrop-blur">
             <span className="hero-kicker-dot" />

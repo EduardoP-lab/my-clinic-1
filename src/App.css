@@ -272,6 +272,11 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.services-extra,
+.services-extra-inner {
+  display: contents;
+}
+
 .service-card {
   position: relative;
   display: grid;
@@ -405,6 +410,10 @@
   font-size: 1.02rem;
   font-weight: 950;
   white-space: nowrap;
+}
+
+.services-toggle {
+  display: none;
 }
 
 .hero-css-bg {
@@ -970,6 +979,31 @@
     grid-template-columns: 1fr;
   }
 
+  .services-extra {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition:
+      grid-template-rows 560ms cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 260ms ease,
+      transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .services-extra-inner {
+    display: grid;
+    min-height: 0;
+    gap: 14px;
+    overflow: hidden;
+  }
+
+  .services-grid-expanded .services-extra {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   .service-card {
     min-height: auto;
   }
@@ -977,6 +1011,39 @@
   .service-card-meta {
     align-items: start;
     flex-direction: column;
+  }
+
+  .services-toggle {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    min-height: 48px;
+    width: min(100%, 220px);
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 112, 187, 0.18);
+    background: #062338;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 900;
+    box-shadow: 0 18px 34px rgba(6, 35, 56, 0.18);
+    transition:
+      transform 220ms ease,
+      box-shadow 220ms ease,
+      background 220ms ease;
+  }
+
+  .services-toggle:hover {
+    background: #0070bb;
+    box-shadow: 0 22px 44px rgba(0, 112, 187, 0.22);
+    transform: translateY(-2px);
+  }
+
+  .services-toggle:focus-visible {
+    outline: 3px solid rgba(20, 184, 166, 0.38);
+    outline-offset: 4px;
   }
 
   .hero-diagnostics-stage {
@@ -995,11 +1062,14 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .services-extra,
+  .services-toggle,
   .hero-arch-map,
   .hero-depth-rings,
   .hero-diagnostic-nodes,
   .hero-scan-plane,
   .hero-metric-column span {
+    transition-duration: 1ms;
     animation-duration: 1ms;
     animation-iteration-count: 1;
   }
