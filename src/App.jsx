@@ -3,6 +3,7 @@ import './normalize.css'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import Services from './components/Services'
+import Contact from './components/Contact'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Hero />
       <Services />
+      <Contact />
     </>
   )
 }
