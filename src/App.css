@@ -416,6 +416,84 @@
   display: none;
 }
 
+.testimonials-section {
+  background:
+    linear-gradient(180deg, #eef7fb 0%, #ffffff 45%, #f5fbff 100%);
+  color: #062338;
+}
+
+.testimonials-header {
+  display: grid;
+  max-width: 760px;
+  gap: 14px;
+}
+
+.testimonials-header p {
+  color: #0070bb;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.testimonials-header h2 {
+  color: #062338;
+  font-size: clamp(2.3rem, 6vw, 4.8rem);
+  font-weight: 950;
+  line-height: 0.98;
+}
+
+.testimonials-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 4vw, 44px);
+  margin-top: clamp(42px, 7vw, 74px);
+}
+
+.testimonial-item {
+  display: grid;
+  gap: 18px;
+  align-items: start;
+  border-left: 1px solid rgba(6, 35, 56, 0.14);
+  padding-left: clamp(18px, 3vw, 28px);
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 4px;
+  color: #14b8a6;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+.testimonial-item blockquote {
+  color: #173f58;
+  font-size: clamp(1.05rem, 1.4vw, 1.28rem);
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.testimonial-item figcaption {
+  display: grid;
+  gap: 6px;
+  justify-items: start;
+  text-align: left;
+}
+
+.testimonial-item figcaption strong {
+  color: #062338;
+  font-size: 1rem;
+  font-weight: 950;
+}
+
+.testimonial-item figcaption span {
+  color: #5d7380;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 .contact-section {
   isolation: isolate;
   contain: layout paint style;
@@ -1163,6 +1241,10 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .testimonials-list {
+    grid-template-columns: 1fr;
+  }
+
   .hero-diagnostics-stage {
     top: 37%;
     right: 50%;
@@ -1222,6 +1304,19 @@
   .service-card-meta {
     align-items: start;
     flex-direction: column;
+  }
+
+  .testimonial-item {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    border-left: 0;
+    border-top: 1px solid rgba(6, 35, 56, 0.12);
+    padding: 24px 0 0;
+  }
+
+  .testimonial-item figcaption {
+    justify-items: start;
+    text-align: left;
   }
 
   .services-toggle {
